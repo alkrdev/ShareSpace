@@ -5,22 +5,19 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div style={flexCentered}>
+        <div style={section(1)}>1</div>
+        <div style={section(3)}>2</div>
+        <div style={section(1)}>3</div>
+      </div>
+      <footer className="App-footer">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </footer>
     </div>
   );
 }
+
+const flexCentered = { display: "flex" };
+const section = (grow) => { return { flexGrow: grow, height: "78vh"} }
 
 export default App;
